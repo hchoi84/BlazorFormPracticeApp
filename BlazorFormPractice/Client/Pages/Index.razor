@@ -1,0 +1,54 @@
+﻿@page "/"
+@using BlazorFormPractice.Client.MyComponents
+
+<PageTitle>Index</PageTitle>
+
+<EditForm EditContext=_editContext>
+  <DataAnnotationsValidator />
+  <div class="col-md-12">
+    <ValidationSummary />
+  </div>
+  <MyInputGeneric DivClass="col-md-12" @bind-Value="_person.FirstName" ValidationFor="() => _person.FirstName" />
+  <MyInputGeneric DivClass="col-md-12" @bind-Value="_person.LastName" ValidationFor="() => _person.LastName" />
+  <MyInputGeneric DivClass="col-md-12" @bind-Value="_person.Gender" ValidationFor="() => _person.Gender" />
+  <MyInputGeneric DivClass="col-md-12" @bind-Value="_person.Age" ValidationFor="() => _person.Age" />
+  <MyInputGeneric DivClass="col-md-12" @bind-Value="_person.HeightFeet" ValidationFor="() => _person.HeightFeet" />
+  <MyInputGeneric DivClass="col-md-12" @bind-Value="_person.HeightInch" ValidationFor="() => _person.HeightInch" />
+  <MyInputGeneric DivClass="col-md-12" @bind-Value="_person.EyeColor" ValidationFor="() => _person.EyeColor" />
+  @*<div class="col-md-12">
+    <label for="firstname" class="col-form-label col-form-label-sm">First Name</label>
+    <InputText id="firstname" class="form-control form-control-sm" @bind-Value="_person.FirstName" />
+    <ValidationMessage For="() => _person.FirstName" />
+  </div>
+  <div class="col-md-12">
+    <label for="lastname" class="col-form-label col-form-label-sm">Last Name</label>
+    <InputText id="lastname" class="form-control form-control-sm" @bind-Value="_person.LastName" />
+  </div>
+  <div class="col-md-12">
+    <label for="gender" class="col-form-label col-form-label-sm">Gender</label>
+    <InputText id="gender" class="form-control form-control-sm" @bind-Value="_person.Gender" />
+  </div>
+  <div class="col-md-12">
+    <label for="age" class="col-form-label col-form-label-sm">Age</label>
+    <InputNumber id="age" class="form-control form-control-sm" @bind-Value="_person.Age" />
+  </div>
+  <div class="col-md-12">
+    <label for="heightfeet" class="col-form-label col-form-label-sm">Height Feet</label>
+    <InputNumber id="heightfeet" class="form-control form-control-sm" @bind-Value="_person.HeightFeet" />
+  </div>
+  <div class="col-md-12">
+    <label for="heightinch" class="col-form-label col-form-label-sm">Height Inch</label>
+    <InputNumber id="heightinch" class="form-control form-control-sm" @bind-Value="_person.HeightInch" />
+  </div>
+  <div class="col-md-12">
+    <label for="eyecolor" class="col-form-label col-form-label-sm">Eye Color</label>
+    <InputText id="eyecolor" class="form-control form-control-sm" @bind-Value="_person.EyeColor" />
+  </div>*@
+  <div class="col-md-12">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</EditForm>
+
+<hr />
+<p>First Name : @_person.FirstName</p>
+<p>Last Name : @_person.LastName</p>
